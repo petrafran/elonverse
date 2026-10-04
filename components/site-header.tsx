@@ -16,9 +16,6 @@ export function SiteHeader() {
         <a href="#markets" className="nav-active">
           Markets
         </a>
-        <a href="#markets" onClick={() => setTopic('x')}>
-          X activity
-        </a>
         <a href="#perps">PERPs</a>
         <a href="#bet-against">Short EVERSE</a>
         <a href="#ledger">Promise ledger</a>

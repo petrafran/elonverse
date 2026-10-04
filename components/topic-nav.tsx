@@ -1,7 +1,8 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import { topicGlyphs, topicLabels, type Topic } from '@/lib/catalog'
+import { topicLabels, type Topic } from '@/lib/catalog'
+import { TopicIcon } from './topic-icon'
 import { useElonverse } from './elonverse-provider'
 
 const topics = Object.keys(topicLabels) as Topic[]
@@ -34,7 +35,9 @@ export function TopicNav() {
               scrollToMarkets()
             }}
           >
-            <span aria-hidden="true">{topicGlyphs[value]}</span>
+            <span aria-hidden="true">
+              <TopicIcon topic={value} size={17} />
+            </span>
             {topicLabels[value]}
           </button>
         ))}

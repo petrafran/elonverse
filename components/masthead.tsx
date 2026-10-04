@@ -10,8 +10,8 @@ import hyperloop from '@/public/hero-hyperloop.png'
 const layers = [
   { className: 'hero-mars', depth: 0.18, image: mars, sizes: '(max-width: 700px) 80vw, (max-width: 1050px) 60vw, 640px', preload: true },
   { className: 'hero-rocket', depth: 0.45, lift: 420, image: rocket, sizes: '(max-width: 700px) 30vw, 220px', preload: false },
-  { className: 'hero-portrait', depth: 0.7, image: portrait, sizes: '(max-width: 700px) 72vw, (max-width: 1050px) 55vw, 560px', preload: true },
-  { className: 'hero-hyperloop', depth: 1, image: hyperloop, sizes: '(max-width: 700px) 150vw, (max-width: 1050px) 100vw, 1150px', preload: false },
+  { className: 'hero-hyperloop', depth: 0.55, image: hyperloop, sizes: '(max-width: 700px) 150vw, (max-width: 1050px) 100vw, 1150px', preload: false },
+  { className: 'hero-portrait', depth: 0.8, image: portrait, sizes: '(max-width: 700px) 72vw, (max-width: 1050px) 55vw, 560px', preload: true },
 ]
 
 // Motion stays confined to the artwork; the title and navigation remain steady.

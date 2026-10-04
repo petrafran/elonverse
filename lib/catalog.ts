@@ -60,29 +60,6 @@ export const topicLabels = {
 
 export type Topic = keyof typeof topicLabels
 
-export const topicGlyphs: Record<Topic, string> = {
-  home: '⌂',
-  neuralink: '⌁',
-  spacex: '↗',
-  grok: '✧',
-  mentions: '@',
-  tesla: 'T',
-  hyperloop: '∞',
-  posts: '#',
-  x: 'X',
-  culture: '✳',
-  ideas: '◎',
-}
-
-export const categorySymbols: Record<string, string> = {
-  space: '↗',
-  machines: 'T',
-  ai: 'x',
-  ideas: '∞',
-  culture: '✳',
-  x: '@',
-}
-
 const topicPatterns: Partial<Record<Topic, RegExp>> = {
   neuralink: /neuralink/i,
   spacex: /spacex|starship/i,

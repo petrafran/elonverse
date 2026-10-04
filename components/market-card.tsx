@@ -1,7 +1,8 @@
 'use client'
 
 import { memo } from 'react'
-import { categorySymbols, probabilityText, type Market } from '@/lib/catalog'
+import { probabilityText, type Market } from '@/lib/catalog'
+import { marketTopic, TopicIcon } from './topic-icon'
 import { useElonverse } from './elonverse-provider'
 
 export const MarketCard = memo(function MarketCard({ market: m }: { market: Market }) {
@@ -14,7 +15,7 @@ export const MarketCard = memo(function MarketCard({ market: m }: { market: Mark
       <div className="card-top">
         <span className="tag">{m.topic}</span>
         <span className="card-symbol" aria-hidden="true">
-          {categorySymbols[m.category] || 'e'}
+          <TopicIcon topic={marketTopic(m)} size={20} />
         </span>
       </div>
       <div className="card-body">
