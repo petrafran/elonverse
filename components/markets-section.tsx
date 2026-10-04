@@ -51,7 +51,6 @@ export function MarketsSection({ snapshotLabel }: { snapshotLabel: string }) {
           <span className="eyebrow">01 / THE PREDICTIONS</span>
           <h2 id="markets-title">{title}</h2>
         </div>
-        <div className="snapshot-label">{snapshotLabel}</div>
       </div>
       <div className="market-controls">
         <div className="category-tabs" role="group" aria-label="Filter by market availability">

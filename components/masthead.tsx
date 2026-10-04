@@ -135,7 +135,6 @@ export function Masthead() {
           <br />
           Follow the odds from Earth to Mars.
         </p>
-        <span className="art-caption">AN ILLUSTRATED ELONVERSE</span>
       </div>
       <div
         className="masthead-art"
