@@ -1,0 +1,556 @@
+{
+  "snapshotLabel": "Market snapshots · October 2, 2026",
+  "checkedAt": "2026-10-02T17:31:16.649Z",
+  "perpCheckedAt": "2026-10-02T17:31:16.649Z",
+  "perps": {
+    "xyz:TSLA": {
+      "funding": "0.00000625",
+      "openInterest": "142490.374",
+      "prevDayPx": "355.55",
+      "dayNtlVlm": "34639664.430249989",
+      "premium": "0.0002175957",
+      "oraclePx": "372.25",
+      "markPx": "372.29",
+      "midPx": "372.33",
+      "impactPxs": [
+        "372.311",
+        "372.351"
+      ],
+      "dayBaseVlm": "95463.63",
+      "_fetchedAt": "2026-10-02T16:56:51.722Z"
+    },
+    "xyz:SPCX": {
+      "funding": "0.00000625",
+      "openInterest": "728007.9600000002",
+      "prevDayPx": "149.83",
+      "dayNtlVlm": "62531660.2416999713",
+      "premium": "-0.0002240559",
+      "oraclePx": "157.55",
+      "markPx": "157.51",
+      "midPx": "157.515",
+      "impactPxs": [
+        "157.5094",
+        "157.52"
+      ],
+      "dayBaseVlm": "409814.9299999999",
+      "_fetchedAt": "2026-10-02T16:56:51.722Z"
+    },
+    "DOGE": {
+      "funding": "0.0000125",
+      "openInterest": "1198178684.0",
+      "prevDayPx": "0.093827",
+      "dayNtlVlm": "23577602.9739030078",
+      "premium": "0.0005361648",
+      "oraclePx": "0.09512",
+      "markPx": "0.095178",
+      "midPx": "0.095176",
+      "impactPxs": [
+        "0.095171",
+        "0.095185"
+      ],
+      "dayBaseVlm": "245260968.0",
+      "_fetchedAt": "2026-10-02T17:04:23.874Z"
+    }
+  },
+  "markets": [
+    {
+      "id": "reusable",
+      "category": "space",
+      "topic": "SpaceX / Starship",
+      "title": "Starship fully reusable before 2027?",
+      "description": "This contract counts an official announcement, not a proven reflight.",
+      "deadline": "Dec 31, 2026 · 11:59pm ET",
+      "rules": "Official SpaceX or Musk announcement that the Starship upper stage is fully reusable by the deadline. An actual reuse is not required; Super Heavy reusability is not the condition. Confirm the exact provider rules.",
+      "status": "listed",
+      "venue": "Polymarket",
+      "url": "https://polymarket.com/event/spacex-starship-fully-reusable-before-2027",
+      "source": "https://polymarket.com/event/spacex-starship-fully-reusable-before-2027",
+      "checkedAt": "2026-10-02T17:11:39.354Z",
+      "probability": 0.265,
+      "outcomeLabel": "YES / IMPLIED PROBABILITY",
+      "outcomes": [
+        "Yes · 26.50%",
+        "No · 73.50%"
+      ],
+      "reference": "POLYMARKET:EVENT:79056"
+    },
+    {
+      "id": "optimus",
+      "category": "machines",
+      "topic": "Tesla / Optimus",
+      "title": "Will Tesla release Optimus by the end of 2026?",
+      "description": "Paid consumer orders count. A factory deployment or demo doesn’t.",
+      "deadline": "Dec 31, 2026 · 11:59pm ET",
+      "rules": "Select the December 31 contract in this event. A newly introduced humanoid, bipedal consumer robot must be available to the general public through an official Tesla consumer channel with paid checkout, preorder or deposit. Unpaid waitlists, demos, internal factory deployment, employee programs and enterprise pilots do not qualify. This is a retail release market, not necessarily physical delivery.",
+      "status": "listed",
+      "venue": "Polymarket",
+      "url": "https://polymarket.com/event/will-tesla-release-optimus-by-june-30-2026",
+      "source": "https://polymarket.com/event/will-tesla-release-optimus-by-june-30-2026",
+      "checkedAt": "2026-10-02T17:05:58.143Z",
+      "probability": 0.075,
+      "outcomeLabel": "YES / DECEMBER 31",
+      "outcomes": [
+        "Yes · 7.50%",
+        "No · 92.50%"
+      ],
+      "reference": "POLYMARKET:EVENT:49286"
+    },
+    {
+      "id": "roadster",
+      "category": "machines",
+      "topic": "Tesla / Roadster",
+      "title": "A new Roadster delivered before 2027?",
+      "description": "The next-generation car must reach a real retail customer.",
+      "deadline": "Dec 31, 2026 · 11:59pm ET",
+      "rules": "Select the December 31, 2026 contract. At least one next-generation Roadster must be physically handed to a qualifying public retail customer, and confirmed, within the timeframe. Original 2008–2012 Roadsters, internal deliveries, employee deliveries and promotional celebrity handovers outside the normal public purchase process do not qualify.",
+      "status": "listed",
+      "venue": "Polymarket",
+      "url": "https://polymarket.com/event/tesla-roadster-delivered-byptptpt",
+      "source": "https://polymarket.com/event/tesla-roadster-delivered-byptptpt",
+      "checkedAt": "2026-10-02T17:06:21.044Z",
+      "probability": 0.0675,
+      "outcomeLabel": "YES / DECEMBER 31, 2026",
+      "outcomes": [
+        "Yes · 6.75%",
+        "No · 93.25%"
+      ],
+      "reference": "POLYMARKET:EVENT:1025748"
+    },
+    {
+      "id": "grok",
+      "category": "ai",
+      "topic": "xAI / Grok",
+      "title": "Grok 5 released before 2027?",
+      "description": "A product release deadline, with official provider rules.",
+      "deadline": "Dec 31, 2026 · 11:59pm ET",
+      "rules": "Select the December 31, 2026 contract. Grok 5 must be a publicly accessible next flagship generation, not merely a Grok 4 variant. An open beta or open rolling waitlist can qualify; private access, placeholder naming and closed betas do not. Confirm the complete provider rules.",
+      "status": "listed",
+      "venue": "Polymarket",
+      "url": "https://polymarket.com/event/grok-5-released-byptptpt-20260710195520919",
+      "source": "https://polymarket.com/event/grok-5-released-byptptpt-20260710195520919",
+      "checkedAt": "2026-10-02T17:12:16.802Z",
+      "probability": 0.64,
+      "outcomeLabel": "YES / DECEMBER 31",
+      "outcomes": [
+        "Yes · 64.00%",
+        "No · 36.00%"
+      ],
+      "reference": "POLYMARKET:EVENT:689437"
+    },
+    {
+      "id": "mars-live",
+      "category": "space",
+      "topic": "SpaceX / Human spaceflight",
+      "title": "Starship launches humans to Mars before 2030?",
+      "description": "A far-out anchor market. Read exactly what “to Mars” means.",
+      "deadline": "Before 2030",
+      "rules": "Confirm the provider’s exact requirements for a qualifying crewed Mars mission, its deadline, evidence sources and cancellation handling. Launching toward Mars and landing on Mars are different milestones.",
+      "status": "listed",
+      "venue": "Kalshi",
+      "url": "https://kalshi.com/markets/kxstarshipmars/starshipmars",
+      "source": "https://kalshi.com/markets/kxstarshipmars/starshipmars",
+      "checkedAt": "2026-10-02T17:12:18.339Z",
+      "probability": 0.1,
+      "outcomeLabel": "YES / BEFORE 2030",
+      "outcomes": [
+        "Yes · 10.00%",
+        "No · 90.00%"
+      ],
+      "reference": "KALSHI:EVENT:STARSHIPMARS"
+    },
+    {
+      "id": "docking",
+      "category": "space",
+      "topic": "SpaceX / Orbital docking",
+      "title": "Two Starships dock together before 2028?",
+      "description": "A practical step on the path to deep-space missions.",
+      "deadline": "Dec 31, 2027 · 11:59pm ET",
+      "rules": "Select the December 31, 2027 contract. Two free-flying qualifying Starship-scale vessels must physically join through mating hardware for at least 60 continuous seconds in stable Earth orbit, with perigee at least 100 km. Credible reporting establishes success. This market is about docking, not propellant transfer; confirm the full rules at the venue.",
+      "status": "listed",
+      "venue": "Polymarket",
+      "url": "https://polymarket.com/event/two-spacex-starships-dock-together-by",
+      "source": "https://polymarket.com/event/two-spacex-starships-dock-together-by",
+      "checkedAt": "2026-10-02T17:12:19.631Z",
+      "probability": 0.43,
+      "outcomeLabel": "YES / DECEMBER 31, 2027",
+      "outcomes": [
+        "Yes · 43.00%",
+        "No · 57.00%"
+      ],
+      "reference": "POLYMARKET:EVENT:584288"
+    },
+    {
+      "id": "merger",
+      "category": "ideas",
+      "topic": "Tesla × SpaceX",
+      "title": "Tesla–SpaceX merger deal before 2028?",
+      "description": "A binding corporate deal, rather than a rumor or shared project.",
+      "deadline": "Before Jan 1, 2028 · check venue timezone",
+      "rules": "Select the Before 2028 contract. This event concerns an official definitive binding transaction agreement that transfers control or consolidates the companies under common ownership. Check the selected contract’s complete rules and deadline; rumors, minority investments or collaborations do not by themselves qualify.",
+      "status": "listed",
+      "venue": "Kalshi",
+      "url": "https://kalshi.com/markets/kxcompanyactionmerger/kxcompanyactionmerger-27",
+      "source": "https://kalshi.com/markets/kxcompanyactionmerger/kxcompanyactionmerger-27",
+      "checkedAt": "2026-10-02T17:06:20.548Z",
+      "probability": 0.65,
+      "outcomeLabel": "YES / BEFORE 2028",
+      "outcomes": [
+        "Yes · 65.00%",
+        "No · 35.00%"
+      ],
+      "reference": "KALSHI:EVENT:KXCOMPANYACTIONMERGER-27"
+    },
+    {
+      "id": "tweets",
+      "category": "x",
+      "topic": "X / Weekly post count",
+      "title": "How many posts this week?",
+      "description": "September 29–October 6, noon ET. Pick a post-count range.",
+      "deadline": "Oct 6, 2026 · noon ET",
+      "rules": "The provider counts Musk’s X activity over its stated weekly window using XTracker. Main-feed posts, quotes and reposts count; ordinary replies do not. Deleted posts count when captured by the tracker. Verify the tracker-specific exceptions on the venue page.",
+      "xKind": "volume",
+      "status": "listed",
+      "venue": "Polymarket",
+      "url": "https://polymarket.com/event/elon-musk-of-tweets-september-29-october-6-2026",
+      "source": "https://polymarket.com/event/elon-musk-of-tweets-september-29-october-6-2026",
+      "checkedAt": "2026-10-02T17:06:17.251Z",
+      "probability": 0.28,
+      "outcomeLabel": "220-239 POSTS",
+      "outcomes": [
+        "<20 · 0.00%",
+        "20-39 · 0.00%",
+        "40-59 · 0.00%",
+        "60-79 · 0.00%",
+        "80-99 · 0.00%",
+        "100-119 · 0.05%",
+        "120-139 · 0.05%",
+        "140-159 · 0.15%",
+        "160-179 · 2.35%",
+        "180-199 · 14.00%",
+        "200-219 · 27.50%",
+        "220-239 · 28.00%",
+        "240-259 · 15.50%",
+        "260-279 · 6.75%",
+        "280-299 · 2.20%",
+        "300-319 · 1.10%",
+        "320-339 · 0.40%",
+        "340-359 · 0.25%",
+        "360-379 · 0.15%",
+        "380-399 · 0.15%",
+        "400-419 · 0.05%",
+        "420-439 · 0.05%",
+        "440-459 · 0.05%",
+        "460-479 · 0.05%",
+        "480-499 · 0.05%",
+        "500+ · 0.05%"
+      ],
+      "reference": "POLYMARKET:EVENT:1083683"
+    },
+    {
+      "id": "mars",
+      "category": "space",
+      "topic": "SpaceX / Mars",
+      "title": "Will Starship launch toward Mars before 2029?",
+      "description": "A launch is one milestone. Arrival and landing are separate bets.",
+      "deadline": "Dec 31, 2028",
+      "source": "https://new.spacex.com/content/starship-talks/mars-2026",
+      "rules": "Resolves Yes if a SpaceX Starship leaves Earth on a publicly confirmed Mars-bound trajectory by December 31, 2028, 23:59 UTC. Earth orbit, a lunar mission, a stated intention or a canceled launch do not qualify. Launch telemetry and SpaceX mission reporting must establish the destination. A failed arrival can still qualify; this market concerns departure. If no qualifying public evidence exists by the deadline, resolves No.",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "status": "idea",
+      "venue": "Market idea",
+      "checkedAt": "2026-10-02T17:31:16.649Z"
+    },
+    {
+      "id": "robotaxi",
+      "category": "machines",
+      "topic": "Tesla / Robotaxi",
+      "title": "Will Tesla Robotaxi operate in 10 U.S. cities before 2028?",
+      "description": "Count real service areas, not launch announcements or private demos.",
+      "deadline": "Dec 31, 2027",
+      "source": "https://www.tesla.com/support/robotaxi",
+      "rules": "Resolves Yes if Tesla provides publicly bookable, paid Robotaxi rides in at least 10 distinct U.S. metropolitan statistical areas by December 31, 2027, 23:59 UTC. The service must permit rides without an in-car human safety driver or monitor; remote assistance is allowed. Use Census metropolitan area definitions, Tesla service-area documentation, and independent evidence of qualifying rides. Adjacent cities within one metro count once. Employee-only testing, announcements and demonstrations do not count. Otherwise resolves No.",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "status": "idea",
+      "venue": "Market idea",
+      "checkedAt": "2026-10-02T17:31:16.649Z"
+    },
+    {
+      "id": "hyperloop",
+      "category": "ideas",
+      "topic": "Hyperloop / Any builder",
+      "title": "Will a passenger Hyperloop open before 2030?",
+      "description": "The idea counts, whoever builds it. A test-track ride doesn’t.",
+      "deadline": "Dec 31, 2029",
+      "source": "https://www.tesla.com/sites/default/files/blog_images/hyperloop-alpha.pdf",
+      "rules": "Resolves Yes if any operator runs a reduced-pressure tube transport system carrying paying members of the public between two distinct stations by December 31, 2029, 23:59 UTC. The normal service must be publicly bookable and operated on at least 30 separate days before the deadline. Conventional trains, exhibition rides, test tracks, invitation-only demonstrations and freight-only systems do not qualify. Evidence must include operator timetables or booking records and independent reporting. Otherwise resolves No.",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "status": "idea",
+      "venue": "Market idea",
+      "checkedAt": "2026-10-02T17:31:16.649Z"
+    },
+    {
+      "id": "superbowl",
+      "category": "culture",
+      "topic": "Culture / Super Bowl",
+      "title": "Will Musk attend Super Bowl LXI?",
+      "description": "A stadium appearance, not a post about the game.",
+      "deadline": "Feb 14, 2027 event · observe by Feb 28",
+      "source": "https://operations.nfl.com/calendar-events/nfl-important-dates",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "rules": "Proposed observation deadline: February 28, 2027, 23:59 UTC. Resolves Yes only with publicly verifiable evidence that Elon Musk was physically present at Super Bowl LXI at SoFi Stadium during the game. Official broadcast footage, dated photographs from established news organizations, or an official NFL statement qualify. An invitation, ticket purchase, social-media commentary or attendance at a separate party does not qualify. If postponed, attendance at the rescheduled game must occur by the observation deadline. If canceled or no qualifying public evidence exists by then, resolves No.",
+      "status": "idea",
+      "venue": "Market idea",
+      "checkedAt": "2026-10-02T17:31:16.649Z"
+    },
+    {
+      "id": "metgala",
+      "category": "culture",
+      "topic": "Culture / Met Gala",
+      "title": "Will Musk attend the 2027 Met Gala?",
+      "description": "Red-carpet receipts. An invitation isn’t attendance.",
+      "deadline": "2027 gala · observe by Dec 31, 2027",
+      "source": "https://www.metmuseum.org/press-releases",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "rules": "Proposed observation deadline: December 31, 2027, 23:59 UTC. Resolves Yes if Elon Musk is physically present at the Metropolitan Museum of Art’s official 2027 Costume Institute benefit. Require official event imagery or dated photographic or video reporting by an established news organization. An invitation, a look-alike, an afterparty or online participation does not count. If postponed, the official 2027 event must take place before the deadline. If canceled, moved beyond the deadline or unsupported by qualifying public evidence, resolves No.",
+      "status": "idea",
+      "venue": "Market idea",
+      "checkedAt": "2026-10-02T17:31:16.649Z"
+    },
+    {
+      "id": "cameo",
+      "category": "culture",
+      "topic": "Culture / Film cameo",
+      "title": "Will Musk have a new film cameo before 2028?",
+      "description": "A real new appearance. Archive clips and AI likenesses don’t count.",
+      "deadline": "Dec 31, 2027",
+      "source": null,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "rules": "Resolves Yes if a new feature-length film first commercially released between market creation and December 31, 2027, 23:59 UTC includes a newly filmed on-screen performance by Elon Musk. A cameo as himself qualifies. Documentaries, news footage, archival footage, animated depictions, AI-generated likenesses, voice-only appearances and television episodes do not qualify. Require the released film plus credits or confirmation from its studio or distributor. Release in any territory qualifies; an announcement or trailer alone does not. Otherwise resolves No.",
+      "status": "idea",
+      "venue": "Market idea",
+      "checkedAt": "2026-10-02T17:31:16.649Z"
+    },
+    {
+      "id": "x-day-50",
+      "category": "x",
+      "xKind": "volume",
+      "topic": "X / 24-hour post count",
+      "title": "50+ posts in a single day?",
+      "description": "A fixed 24-hour sprint: October 5, 00:00–24:00 UTC.",
+      "deadline": "Oct 6, 2026 · 00:00 UTC",
+      "source": "https://x.com/elonmusk",
+      "outcomes": [
+        "Yes · 50 or more",
+        "No · fewer than 50"
+      ],
+      "rules": "Proposed window: October 5, 2026, 00:00 UTC inclusive to October 6, 2026, 00:00 UTC exclusive. Count distinct @elonmusk post IDs published in the window: original posts, quote posts and repost actions; exclude ordinary replies. A quote counts once regardless of its text. Deleted activity counts only if captured with its ID, type and timestamp. Resolves Yes at 50 or more qualifying posts; otherwise No. Final launch must name a complete archived counting source and its main-feed reply exceptions. Cancel if the required record is unavailable rather than infer No.",
+      "status": "idea",
+      "venue": "Market idea",
+      "checkedAt": "2026-10-02T17:31:16.649Z"
+    },
+    {
+      "id": "x-two-days",
+      "category": "x",
+      "xKind": "volume",
+      "topic": "X / 48-hour post count",
+      "title": "How many posts in 48 hours?",
+      "description": "October 5–7 UTC. Choose a count range for a two-day burst.",
+      "deadline": "Oct 7, 2026 · 00:00 UTC",
+      "source": "https://x.com/elonmusk",
+      "outcomes": [
+        "0–49 posts",
+        "50–99 posts",
+        "100–149 posts",
+        "150+ posts"
+      ],
+      "rules": "Proposed window: October 5, 2026, 00:00 UTC inclusive to October 7, 2026, 00:00 UTC exclusive. Count distinct @elonmusk post IDs: original posts, quote posts and repost actions; exclude ordinary replies. Deleted activity counts only if captured with its ID, type and timestamp. Each qualifying post counts once. Final launch must name a complete archived counting source and its main-feed reply exceptions. Cancel if the required record is unavailable rather than infer zero. Resolve to the unique range containing the final count.",
+      "status": "idea",
+      "venue": "Market idea",
+      "checkedAt": "2026-10-02T17:31:16.649Z"
+    },
+    {
+      "id": "x-november",
+      "category": "x",
+      "xKind": "volume",
+      "topic": "X / Monthly post count",
+      "title": "How many posts in November?",
+      "description": "One whole calendar month. Fixed UTC boundaries, complete count ranges.",
+      "deadline": "Dec 1, 2026 · 00:00 UTC",
+      "source": "https://x.com/elonmusk",
+      "outcomes": [
+        "0–499 posts",
+        "500–999 posts",
+        "1,000–1,499 posts",
+        "1,500+ posts"
+      ],
+      "rules": "Proposed window: November 1, 2026, 00:00 UTC inclusive to December 1, 2026, 00:00 UTC exclusive. Count distinct @elonmusk post IDs: original posts, quote posts and repost actions; exclude ordinary replies. Deleted activity counts only if captured with its ID, type and timestamp. Each qualifying post counts once. Final launch must name a complete archived counting source and its main-feed reply exceptions. Cancel if the required record is unavailable rather than infer zero. Resolve to the unique range containing the final count.",
+      "status": "idea",
+      "venue": "Market idea",
+      "checkedAt": "2026-10-02T17:31:16.649Z"
+    },
+    {
+      "id": "x-tag-tesla",
+      "category": "x",
+      "xKind": "tags",
+      "topic": "X / @Tesla",
+      "title": "Will Elon tag @Tesla next week?",
+      "description": "An exact account tag in his own post text. October 5–12 UTC.",
+      "deadline": "Oct 12, 2026 · 00:00 UTC",
+      "target": "@Tesla",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "source": "https://x.com/elonmusk",
+      "rules": "Proposed window: October 5, 2026, 00:00 UTC inclusive to October 12, 2026, 00:00 UTC exclusive. Count distinct @elonmusk original posts, replies and his own quote-post commentary containing the target. Require the exact @Tesla token, matched case-insensitively. A plain name, partial handle, renamed account, or automatically added reply recipient does not qualify. Freeze any account ID mapping at launch. Each qualifying post counts once regardless of repetition. Pure reposts, quoted original text, image text and link previews do not count. Deleted posts count only with an archived ID, author text and timestamp. Resolves Yes if at least 1 qualifying post occurs, otherwise No. Final launch must designate a complete archived source; cancel if records are insufficient rather than infer No.",
+      "status": "idea",
+      "venue": "Market idea",
+      "checkedAt": "2026-10-02T17:31:16.649Z"
+    },
+    {
+      "id": "x-tag-spacex",
+      "category": "x",
+      "xKind": "tags",
+      "topic": "X / @SpaceX",
+      "title": "3+ posts tagging @SpaceX next week?",
+      "description": "Count posts with the tag, not repeated tags within a post.",
+      "deadline": "Oct 12, 2026 · 00:00 UTC",
+      "target": "@SpaceX",
+      "threshold": 3,
+      "outcomes": [
+        "Yes · at least 3 posts",
+        "No · fewer than 3 posts"
+      ],
+      "source": "https://x.com/elonmusk",
+      "rules": "Proposed window: October 5, 2026, 00:00 UTC inclusive to October 12, 2026, 00:00 UTC exclusive. Count distinct @elonmusk original posts, replies and his own quote-post commentary containing the target. Require the exact @SpaceX token, matched case-insensitively. A plain name, partial handle, renamed account, or automatically added reply recipient does not qualify. Freeze any account ID mapping at launch. Each qualifying post counts once regardless of repetition. Pure reposts, quoted original text, image text and link previews do not count. Deleted posts count only with an archived ID, author text and timestamp. Resolves Yes if at least 3 qualifying posts occur, otherwise No. Final launch must designate a complete archived source; cancel if records are insufficient rather than infer No.",
+      "status": "idea",
+      "venue": "Market idea",
+      "checkedAt": "2026-10-02T17:31:16.649Z"
+    },
+    {
+      "id": "x-tag-xai",
+      "category": "x",
+      "xKind": "tags",
+      "topic": "X / @xAI",
+      "title": "Will Elon tag @xAI next week?",
+      "description": "Company-name text alone doesn’t qualify as an account tag.",
+      "deadline": "Oct 12, 2026 · 00:00 UTC",
+      "target": "@xAI",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "source": "https://x.com/elonmusk",
+      "rules": "Proposed window: October 5, 2026, 00:00 UTC inclusive to October 12, 2026, 00:00 UTC exclusive. Count distinct @elonmusk original posts, replies and his own quote-post commentary containing the target. Require the exact @xAI token, matched case-insensitively. A plain name, partial handle, renamed account, or automatically added reply recipient does not qualify. Freeze any account ID mapping at launch. Each qualifying post counts once regardless of repetition. Pure reposts, quoted original text, image text and link previews do not count. Deleted posts count only with an archived ID, author text and timestamp. Resolves Yes if at least 1 qualifying post occurs, otherwise No. Final launch must designate a complete archived source; cancel if records are insufficient rather than infer No.",
+      "status": "idea",
+      "venue": "Market idea",
+      "checkedAt": "2026-10-02T17:31:16.649Z"
+    },
+    {
+      "id": "x-tag-winner",
+      "category": "x",
+      "xKind": "tags",
+      "topic": "X / Most-tagged account",
+      "title": "Who gets tagged the most next week?",
+      "description": "@Tesla, @SpaceX, @xAI or someone else? Ties get their own outcome.",
+      "deadline": "Oct 12, 2026 · 00:00 UTC",
+      "source": "https://x.com/elonmusk",
+      "outcomes": [
+        "@Tesla",
+        "@SpaceX",
+        "@xAI",
+        "Other account",
+        "Tie",
+        "No account tags"
+      ],
+      "rules": "Proposed window: October 5, 2026, 00:00 UTC inclusive to October 12, 2026, 00:00 UTC exclusive. For each exact @handle, count distinct @elonmusk original posts, replies and his own quote-post commentary containing that tag. Repeated tags within one post count once per handle. Exclude pure reposts, quoted original text, image text, link previews and automatically added reply recipients. Handles are case-insensitive; freeze the mapping of the three named handles to their account IDs at launch. A unique highest count resolves to the named account or Other account if its handle is outside the named set. Equal highest positive counts across any accounts resolve Tie. Zero qualifying tags resolves No account tags. Deleted text counts only with an archived ID, text and timestamp. Final launch must designate a complete archived source; cancel if records are insufficient.",
+      "status": "idea",
+      "venue": "Market idea",
+      "checkedAt": "2026-10-02T17:31:16.649Z"
+    },
+    {
+      "id": "x-hashtag-mars",
+      "category": "x",
+      "xKind": "tags",
+      "topic": "X / #Mars",
+      "title": "Will he use #Mars next week?",
+      "description": "The hashtag itself counts. A plain “Mars” mention doesn’t.",
+      "deadline": "Oct 12, 2026 · 00:00 UTC",
+      "target": "#Mars",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "source": "https://x.com/elonmusk",
+      "rules": "Proposed window: October 5, 2026, 00:00 UTC inclusive to October 12, 2026, 00:00 UTC exclusive. Count distinct @elonmusk original posts, replies and his own quote-post commentary containing the target. Require the exact #Mars token, matched case-insensitively. A plain name, partial handle, renamed account, or automatically added reply recipient does not qualify. Freeze any account ID mapping at launch. Each qualifying post counts once regardless of repetition. Pure reposts, quoted original text, image text and link previews do not count. Deleted posts count only with an archived ID, author text and timestamp. Resolves Yes if at least 1 qualifying post occurs, otherwise No. Final launch must designate a complete archived source; cancel if records are insufficient rather than infer No.",
+      "status": "idea",
+      "venue": "Market idea",
+      "checkedAt": "2026-10-02T17:31:16.649Z"
+    },
+    {
+      "id": "x-product-optimus",
+      "category": "x",
+      "xKind": "products",
+      "topic": "X / Optimus mentions",
+      "title": "5+ posts mentioning Optimus next week?",
+      "description": "A product attention market: October 5–12 UTC.",
+      "deadline": "Oct 12, 2026 · 00:00 UTC",
+      "target": "Optimus",
+      "threshold": 5,
+      "outcomes": [
+        "Yes · at least 5 posts",
+        "No · fewer than 5 posts"
+      ],
+      "source": "https://x.com/elonmusk",
+      "rules": "Proposed window: October 5, 2026, 00:00 UTC inclusive to October 12, 2026, 00:00 UTC exclusive. Count distinct @elonmusk original posts, replies and his own quote-post commentary containing the target. Require the standalone word Optimus, matched case-insensitively in author text. Attached @handles and #hashtags, substrings and URL text do not qualify. No aliases or translated forms count; any alias dictionary must be fixed before launch. Each qualifying post counts once regardless of repetition. Pure reposts, quoted original text, image text and link previews do not count. Deleted posts count only with an archived ID, author text and timestamp. Resolves Yes if at least 5 qualifying posts occur, otherwise No. Final launch must designate a complete archived source; cancel if records are insufficient rather than infer No.",
+      "status": "idea",
+      "venue": "Market idea",
+      "checkedAt": "2026-10-02T17:31:16.649Z"
+    },
+    {
+      "id": "x-keyword-mars",
+      "category": "x",
+      "xKind": "keywords",
+      "topic": "X / Mars mentions",
+      "title": "Will Elon mention Mars next week?",
+      "description": "The word “Mars” in his own text. Hashtags and @tags are separate markets.",
+      "deadline": "Oct 12, 2026 · 00:00 UTC",
+      "target": "Mars",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "source": "https://x.com/elonmusk",
+      "rules": "Proposed window: October 5, 2026, 00:00 UTC inclusive to October 12, 2026, 00:00 UTC exclusive. Count distinct @elonmusk original posts, replies and his own quote-post commentary containing the target. Require the standalone word Mars, matched case-insensitively in author text. Attached @handles and #hashtags, substrings and URL text do not qualify. No aliases or translated forms count; any alias dictionary must be fixed before launch. Each qualifying post counts once regardless of repetition. Pure reposts, quoted original text, image text and link previews do not count. Deleted posts count only with an archived ID, author text and timestamp. Resolves Yes if at least 1 qualifying post occurs, otherwise No. Final launch must designate a complete archived source; cancel if records are insufficient rather than infer No.",
+      "status": "idea",
+      "venue": "Market idea",
+      "checkedAt": "2026-10-02T17:31:16.649Z"
+    }
+  ],
+  "research": {
+    "providers": [
+      "Polymarket",
+      "Kalshi",
+      "Precog"
+    ],
+    "precog": "Musk search returned no open results; broader duplicate checks remain pending for proposed questions."
+  }
+}

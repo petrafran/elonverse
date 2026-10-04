@@ -1,0 +1,16 @@
+Elonverse depth header
+Mode: built-in ImageGen edit with transparent backgrounds.
+Assets: hero-portrait.png, hero-mars.png, hero-rocket.png, hero-hyperloop.png in the source bundle's elonverse folder.
+Edit target: original Elonverse header artwork.
+
+PORTRAIT
+Use case: background-extraction. Edit target: original Elonverse header artwork. Isolate ONLY the illustrated Elon Musk head, neck and shoulders, gazing upward and to the right, preserving his recognizable face, expression, hairstyle and charcoal jacket. Preserve the original warm ivory and charcoal vintage engraved editorial halftone style. Center the complete bust in a square canvas with a clean natural silhouette and a soft jacket fade. Truly transparent background. Remove planet, rocket, tube, ground and stars. No additional objects or text.
+
+MARS
+Use case: background-extraction. Edit target: original Elonverse header artwork. Isolate ONLY the orange Mars planet and reconstruct it as a complete circular sphere with the same cratered mineral surface, warm upper-right rim light and dark lower-left shading. Preserve the original premium vintage engraved editorial halftone style and orange palette. Center the complete sphere in a square canvas with transparent margins. Truly transparent background. Remove rocket and exhaust, reconstructing the crater texture behind them. No person, ground, tube, stars, text or extra objects.
+
+ROCKET
+Use case: background-extraction. Input image is the edit target and style reference from the existing Elonverse header. Preserve its premium vintage editorial engraving, fine halftone grain, charcoal, warm ivory and Mars orange palette. Create ONE isolated object on a truly transparent background, no rectangular backdrop, no typography, no borders, no other objects. Intended as a separate parallax layer in the same website header. Isolate ONLY the vertical stainless-steel Starship rocket with its luminous ivory-orange exhaust plume beneath it. Preserve the slender steel rocket with fins. Show complete rocket and a narrow long exhaust plume, fading softly into transparency at the bottom. Center the full subject in a tall portrait canvas, transparent margins. Remove all Mars, person, background, ground and tube. No large ground smoke cloud.
+
+HYPERLOOP
+Use case: background-extraction. Input image is the edit target and style reference from the existing Elonverse header. Preserve its premium vintage editorial engraving, fine halftone grain, charcoal, warm ivory and Mars orange palette. Create ONE isolated object on a truly transparent background, no rectangular backdrop, no typography, no borders, no other objects. Intended as a separate parallax layer in the same website header. Isolate ONLY the glass and steel Hyperloop tube with support pillars from the bottom foreground. Extend it as a wide horizontal perspective structure receding toward the left and large at the right; preserve its ivory metallic highlights and warm glass reflections. Center the entire complete tube and pillars on a wide landscape transparent canvas, transparent margins. Remove person, Mars, rocket, ground and stars.

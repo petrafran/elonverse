@@ -1,0 +1,12 @@
+Elonverse artwork brief
+Generated using the built-in ImageGen tool.
+
+Use case: stylized-concept
+Asset type: wide editorial hero artwork for the Elonverse prediction market website
+Primary request: ONE original retrofuturist premium space magazine collage. Recognizable stylized Elon Musk side profile gazing upward toward a large Mars planet; a small stainless steel Starship rocket ascending; a sleek hyperloop tube sweeping across the bottom.
+Scene/backdrop: dark graphite space background with restrained stars, evocative cosmic atmosphere.
+Style/medium: sophisticated printed editorial illustration, cut paper collage mixed with halftone screen printing and subtle grain, cinematic composition, illustrative fantasy rather than documentary photography.
+Composition/framing: panoramic landscape with a 2:1 aspect ratio; subjects concentrated in the middle and right, generous dark quiet space on the left. Mars high on the right; Musk profile in the middle right; Starship ascending near Mars; curving hyperloop across bottom. Carefully balanced layers and scale.
+Color palette: graphite black, warm ivory, vivid burnt Mars orange, limited palette.
+Materials/textures: tactile halftone print grain, ivory graphic highlights on metallic rocket and hyperloop, nuanced orange planetary texture.
+Constraints: no text, no UI, no logos, no watermark; no invented lettering. One cohesive artwork, high polish.
