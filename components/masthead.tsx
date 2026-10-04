@@ -9,7 +9,7 @@ import hyperloop from '@/public/hero-hyperloop.png'
 
 const layers = [
   { className: 'hero-mars', depth: 0.18, image: mars, sizes: '(max-width: 700px) 80vw, (max-width: 1050px) 60vw, 640px', preload: true },
-  { className: 'hero-rocket', depth: 0.45, image: rocket, sizes: '(max-width: 700px) 30vw, 220px', preload: false },
+  { className: 'hero-rocket', depth: 0.45, lift: 420, image: rocket, sizes: '(max-width: 700px) 30vw, 220px', preload: false },
   { className: 'hero-portrait', depth: 0.7, image: portrait, sizes: '(max-width: 700px) 72vw, (max-width: 1050px) 55vw, 560px', preload: true },
   { className: 'hero-hyperloop', depth: 1, image: hyperloop, sizes: '(max-width: 700px) 150vw, (max-width: 1050px) 100vw, 1150px', preload: false },
 ]
@@ -49,8 +49,10 @@ function useHeaderDepth(heroRef: React.RefObject<HTMLElement | null>, sceneRef: 
       const small = hero.clientWidth < 700 ? 0.55 : 1
       layerEls.forEach((layer) => {
         const depth = Number(layer.dataset.depth)
+        const lift = Number(layer.dataset.lift ?? 0)
+        const scrollShift = lift ? -scroll * lift : scroll * 76 * depth
         layer.style.setProperty('--layer-x', `${(-x * 35 * depth * small).toFixed(2)}px`)
-        layer.style.setProperty('--layer-y', `${(-y * 18 * depth * small + scroll * 76 * depth * small).toFixed(2)}px`)
+        layer.style.setProperty('--layer-y', `${((-y * 18 * depth + scrollShift) * small).toFixed(2)}px`)
       })
       scene.style.setProperty('--scene-rx', `${(y * 1.2).toFixed(3)}deg`)
       scene.style.setProperty('--scene-ry', `${(-x * 2).toFixed(3)}deg`)
@@ -143,7 +145,9 @@ export function Masthead() {
         <div className="hero-scene" aria-hidden="true" ref={sceneRef}>
           <div className="depth-layer hero-stars" data-depth="0.08" />
           {layers.map((layer) => (
-            <div key={layer.className} className={`depth-layer ${layer.className}`} data-depth={layer.depth}>
+            <div key={layer.className} className={`depth-layer ${layer.className}`} data-depth={layer.depth}
+              data-lift={'lift' in layer ? layer.lift : undefined}
+            >
               <Image
                 src={layer.image}
                 alt=""
