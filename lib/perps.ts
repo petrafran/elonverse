@@ -1,9 +1,13 @@
 import type { PerpMap } from './catalog'
 
+const REFERRAL = '7504273Q'
+const lighterURL = (symbol: string) => `https://app.lighter.xyz/trade/${symbol}?referral=${REFERRAL}`
+const LIGHTER_API = 'https://mainnet.zklighter.elliot.ai/api/v1'
+
 export const perpDefs = [
-  { coin: 'xyz:TSLA', name: 'Tesla', venue: 'trade[XYZ]', url: 'https://app.hyperliquid.xyz/trade/xyz:TSLA', dex: 'xyz' },
-  { coin: 'xyz:SPCX', name: 'SpaceX', venue: 'trade[XYZ]', url: 'https://app.hyperliquid.xyz/trade/xyz:SPCX', dex: 'xyz' },
-  { coin: 'DOGE', name: 'Dogecoin', venue: 'Hyperliquid', url: 'https://app.hyperliquid.xyz/trade/DOGE', dex: '' },
+  { coin: 'SPCX', name: 'SpaceX', venue: 'Lighter', url: lighterURL('SPCX'), marketId: 194, digits: 2 },
+  { coin: 'TSLA', name: 'Tesla', venue: 'Lighter', url: lighterURL('TSLA'), marketId: 112, digits: 2 },
+  { coin: 'DOGE', name: 'Dogecoin', venue: 'Lighter', url: lighterURL('DOGE'), marketId: 3, digits: 5 },
 ] as const
 
 export interface PerpResponse {
@@ -12,46 +16,60 @@ export interface PerpResponse {
   fetchedAt: string
 }
 
-interface UniverseEntry {
-  name: string
-  isDelisted?: boolean
+interface LighterMarket {
+  symbol: string
+  market_id: number
+  status: string
+  mark_price?: string
+  last_trade_price?: number
+  daily_price_change?: number
+  daily_quote_token_volume?: number
 }
 
-async function fetchDex(dex: string): Promise<PerpMap> {
-  const response = await fetch('https://api.hyperliquid.xyz/info', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ type: 'metaAndAssetCtxs', ...(dex ? { dex } : {}) }),
-    signal: AbortSignal.timeout(10_000),
-    cache: 'no-store',
-  })
+interface LighterFunding {
+  market_id: number
+  exchange: string
+  rate: number
+}
+
+async function getJSON<T>(url: string): Promise<T> {
+  const response = await fetch(url, { signal: AbortSignal.timeout(10_000), cache: 'no-store' })
   if (!response.ok) throw new Error('Venue unavailable')
-  const data = await response.json()
-  if (!Array.isArray(data) || !Array.isArray(data[0]?.universe) || !Array.isArray(data[1])) {
-    throw new Error('Unexpected venue response')
-  }
-  const fetchedAt = new Date().toISOString()
-  const output: PerpMap = {}
-  ;(data[0].universe as UniverseEntry[]).forEach((market, index) => {
-    const context = data[1][index]
-    if (perpDefs.some((d) => d.coin === market.name) && !market.isDelisted && context && Number(context.markPx) > 0) {
-      output[market.name] = {
-        funding: context.funding,
-        prevDayPx: context.prevDayPx,
-        dayNtlVlm: context.dayNtlVlm,
-        markPx: context.markPx,
-        _fetchedAt: fetchedAt,
-      }
-    }
-  })
-  return output
+  return response.json()
+}
+
+async function fetchMarket(marketId: number) {
+  const data = await getJSON<{ order_book_details?: LighterMarket[] }>(`${LIGHTER_API}/orderBookDetails?market_id=${marketId}`)
+  return data.order_book_details?.[0]
 }
 
 export async function fetchPerps(): Promise<PerpResponse> {
-  const results = await Promise.allSettled([...new Set(perpDefs.map((d) => d.dex))].map(fetchDex))
+  const [fundingResult, ...marketResults] = await Promise.allSettled([
+    getJSON<{ funding_rates?: LighterFunding[] }>(`${LIGHTER_API}/funding-rates`),
+    ...perpDefs.map((d) => fetchMarket(d.marketId)),
+  ])
+  const funding =
+    fundingResult.status === 'fulfilled'
+      ? (fundingResult.value as { funding_rates?: LighterFunding[] }).funding_rates?.filter((f) => f.exchange === 'lighter') ?? []
+      : []
+  const fetchedAt = new Date().toISOString()
   const perps: PerpMap = {}
-  for (const result of results) {
-    if (result.status === 'fulfilled') Object.assign(perps, result.value)
-  }
-  return { perps, count: Object.keys(perps).length, fetchedAt: new Date().toISOString() }
+
+  marketResults.forEach((result, i) => {
+    const def = perpDefs[i]
+    if (result.status !== 'fulfilled') return
+    const market = result.value as LighterMarket | undefined
+    const mark = Number(market?.mark_price ?? market?.last_trade_price)
+    if (!market || market.status !== 'active' || !(mark > 0)) return
+    const change = Number(market.daily_price_change)
+    perps[def.coin] = {
+      markPx: String(mark),
+      prevDayPx: Number.isFinite(change) ? String(mark / (1 + change / 100)) : undefined,
+      dayNtlVlm: market.daily_quote_token_volume != null ? String(market.daily_quote_token_volume) : undefined,
+      funding: funding.find((f) => f.market_id === def.marketId)?.rate?.toString(),
+      _fetchedAt: fetchedAt,
+    }
+  })
+
+  return { perps, count: Object.keys(perps).length, fetchedAt }
 }

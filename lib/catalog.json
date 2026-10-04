@@ -2,56 +2,7 @@
   "snapshotLabel": "Market snapshots · October 2, 2026",
   "checkedAt": "2026-10-02T17:31:16.649Z",
   "perpCheckedAt": "2026-10-02T17:31:16.649Z",
-  "perps": {
-    "xyz:TSLA": {
-      "funding": "0.00000625",
-      "openInterest": "142490.374",
-      "prevDayPx": "355.55",
-      "dayNtlVlm": "34639664.430249989",
-      "premium": "0.0002175957",
-      "oraclePx": "372.25",
-      "markPx": "372.29",
-      "midPx": "372.33",
-      "impactPxs": [
-        "372.311",
-        "372.351"
-      ],
-      "dayBaseVlm": "95463.63",
-      "_fetchedAt": "2026-10-02T16:56:51.722Z"
-    },
-    "xyz:SPCX": {
-      "funding": "0.00000625",
-      "openInterest": "728007.9600000002",
-      "prevDayPx": "149.83",
-      "dayNtlVlm": "62531660.2416999713",
-      "premium": "-0.0002240559",
-      "oraclePx": "157.55",
-      "markPx": "157.51",
-      "midPx": "157.515",
-      "impactPxs": [
-        "157.5094",
-        "157.52"
-      ],
-      "dayBaseVlm": "409814.9299999999",
-      "_fetchedAt": "2026-10-02T16:56:51.722Z"
-    },
-    "DOGE": {
-      "funding": "0.0000125",
-      "openInterest": "1198178684.0",
-      "prevDayPx": "0.093827",
-      "dayNtlVlm": "23577602.9739030078",
-      "premium": "0.0005361648",
-      "oraclePx": "0.09512",
-      "markPx": "0.095178",
-      "midPx": "0.095176",
-      "impactPxs": [
-        "0.095171",
-        "0.095185"
-      ],
-      "dayBaseVlm": "245260968.0",
-      "_fetchedAt": "2026-10-02T17:04:23.874Z"
-    }
-  },
+  "perps": {},
   "markets": [
     {
       "id": "reusable",
@@ -63,8 +14,8 @@
       "rules": "Official SpaceX or Musk announcement that the Starship upper stage is fully reusable by the deadline. An actual reuse is not required; Super Heavy reusability is not the condition. Confirm the exact provider rules.",
       "status": "listed",
       "venue": "Polymarket",
-      "url": "https://polymarket.com/event/spacex-starship-fully-reusable-before-2027",
-      "source": "https://polymarket.com/event/spacex-starship-fully-reusable-before-2027",
+      "url": "https://polymarket.com/event/spacex-starship-fully-reusable-before-2027?r=mtsmarkets",
+      "source": "https://polymarket.com/event/spacex-starship-fully-reusable-before-2027?r=mtsmarkets",
       "checkedAt": "2026-10-02T17:11:39.354Z",
       "probability": 0.265,
       "outcomeLabel": "YES / IMPLIED PROBABILITY",
@@ -72,7 +23,9 @@
         "Yes · 26.50%",
         "No · 73.50%"
       ],
-      "reference": "POLYMARKET:EVENT:79056"
+      "reference": "POLYMARKET:EVENT:79056",
+      "eventSlug": "spacex-starship-fully-reusable-before-2027",
+      "marketSlug": "spacex-starship-fully-reusable-before-2027"
     },
     {
       "id": "optimus",
@@ -84,8 +37,8 @@
       "rules": "Select the December 31 contract in this event. A newly introduced humanoid, bipedal consumer robot must be available to the general public through an official Tesla consumer channel with paid checkout, preorder or deposit. Unpaid waitlists, demos, internal factory deployment, employee programs and enterprise pilots do not qualify. This is a retail release market, not necessarily physical delivery.",
       "status": "listed",
       "venue": "Polymarket",
-      "url": "https://polymarket.com/event/will-tesla-release-optimus-by-june-30-2026",
-      "source": "https://polymarket.com/event/will-tesla-release-optimus-by-june-30-2026",
+      "url": "https://polymarket.com/event/will-tesla-release-optimus-by-june-30-2026?r=mtsmarkets",
+      "source": "https://polymarket.com/event/will-tesla-release-optimus-by-june-30-2026?r=mtsmarkets",
       "checkedAt": "2026-10-02T17:05:58.143Z",
       "probability": 0.075,
       "outcomeLabel": "YES / DECEMBER 31",
@@ -93,7 +46,9 @@
         "Yes · 7.50%",
         "No · 92.50%"
       ],
-      "reference": "POLYMARKET:EVENT:49286"
+      "reference": "POLYMARKET:EVENT:49286",
+      "eventSlug": "will-tesla-release-optimus-by-june-30-2026",
+      "marketSlug": "will-tesla-release-optimus-by-december-31-2026"
     },
     {
       "id": "roadster",
@@ -105,8 +60,8 @@
       "rules": "Select the December 31, 2026 contract. At least one next-generation Roadster must be physically handed to a qualifying public retail customer, and confirmed, within the timeframe. Original 2008–2012 Roadsters, internal deliveries, employee deliveries and promotional celebrity handovers outside the normal public purchase process do not qualify.",
       "status": "listed",
       "venue": "Polymarket",
-      "url": "https://polymarket.com/event/tesla-roadster-delivered-byptptpt",
-      "source": "https://polymarket.com/event/tesla-roadster-delivered-byptptpt",
+      "url": "https://polymarket.com/event/tesla-roadster-delivered-byptptpt?r=mtsmarkets",
+      "source": "https://polymarket.com/event/tesla-roadster-delivered-byptptpt?r=mtsmarkets",
       "checkedAt": "2026-10-02T17:06:21.044Z",
       "probability": 0.0675,
       "outcomeLabel": "YES / DECEMBER 31, 2026",
@@ -114,7 +69,9 @@
         "Yes · 6.75%",
         "No · 93.25%"
       ],
-      "reference": "POLYMARKET:EVENT:1025748"
+      "reference": "POLYMARKET:EVENT:1025748",
+      "eventSlug": "tesla-roadster-delivered-byptptpt",
+      "marketSlug": "tesla-roadster-delivered-by-december-31-2026"
     },
     {
       "id": "grok",
@@ -126,8 +83,8 @@
       "rules": "Select the December 31, 2026 contract. Grok 5 must be a publicly accessible next flagship generation, not merely a Grok 4 variant. An open beta or open rolling waitlist can qualify; private access, placeholder naming and closed betas do not. Confirm the complete provider rules.",
       "status": "listed",
       "venue": "Polymarket",
-      "url": "https://polymarket.com/event/grok-5-released-byptptpt-20260710195520919",
-      "source": "https://polymarket.com/event/grok-5-released-byptptpt-20260710195520919",
+      "url": "https://polymarket.com/event/grok-5-released-byptptpt-20260710195520919?r=mtsmarkets",
+      "source": "https://polymarket.com/event/grok-5-released-byptptpt-20260710195520919?r=mtsmarkets",
       "checkedAt": "2026-10-02T17:12:16.802Z",
       "probability": 0.64,
       "outcomeLabel": "YES / DECEMBER 31",
@@ -135,28 +92,9 @@
         "Yes · 64.00%",
         "No · 36.00%"
       ],
-      "reference": "POLYMARKET:EVENT:689437"
-    },
-    {
-      "id": "mars-live",
-      "category": "space",
-      "topic": "SpaceX / Human spaceflight",
-      "title": "Starship launches humans to Mars before 2030?",
-      "description": "A far-out anchor market. Read exactly what “to Mars” means.",
-      "deadline": "Before 2030",
-      "rules": "Confirm the provider’s exact requirements for a qualifying crewed Mars mission, its deadline, evidence sources and cancellation handling. Launching toward Mars and landing on Mars are different milestones.",
-      "status": "listed",
-      "venue": "Kalshi",
-      "url": "https://kalshi.com/markets/kxstarshipmars/starshipmars",
-      "source": "https://kalshi.com/markets/kxstarshipmars/starshipmars",
-      "checkedAt": "2026-10-02T17:12:18.339Z",
-      "probability": 0.1,
-      "outcomeLabel": "YES / BEFORE 2030",
-      "outcomes": [
-        "Yes · 10.00%",
-        "No · 90.00%"
-      ],
-      "reference": "KALSHI:EVENT:STARSHIPMARS"
+      "reference": "POLYMARKET:EVENT:689437",
+      "eventSlug": "grok-5-released-byptptpt-20260710195520919",
+      "marketSlug": "will-grok-5-be-released-by-december-31-2026-20260710195520922-353-996"
     },
     {
       "id": "docking",
@@ -168,8 +106,8 @@
       "rules": "Select the December 31, 2027 contract. Two free-flying qualifying Starship-scale vessels must physically join through mating hardware for at least 60 continuous seconds in stable Earth orbit, with perigee at least 100 km. Credible reporting establishes success. This market is about docking, not propellant transfer; confirm the full rules at the venue.",
       "status": "listed",
       "venue": "Polymarket",
-      "url": "https://polymarket.com/event/two-spacex-starships-dock-together-by",
-      "source": "https://polymarket.com/event/two-spacex-starships-dock-together-by",
+      "url": "https://polymarket.com/event/two-spacex-starships-dock-together-by?r=mtsmarkets",
+      "source": "https://polymarket.com/event/two-spacex-starships-dock-together-by?r=mtsmarkets",
       "checkedAt": "2026-10-02T17:12:19.631Z",
       "probability": 0.43,
       "outcomeLabel": "YES / DECEMBER 31, 2027",
@@ -177,28 +115,9 @@
         "Yes · 43.00%",
         "No · 57.00%"
       ],
-      "reference": "POLYMARKET:EVENT:584288"
-    },
-    {
-      "id": "merger",
-      "category": "ideas",
-      "topic": "Tesla × SpaceX",
-      "title": "Tesla–SpaceX merger deal before 2028?",
-      "description": "A binding corporate deal, rather than a rumor or shared project.",
-      "deadline": "Before Jan 1, 2028 · check venue timezone",
-      "rules": "Select the Before 2028 contract. This event concerns an official definitive binding transaction agreement that transfers control or consolidates the companies under common ownership. Check the selected contract’s complete rules and deadline; rumors, minority investments or collaborations do not by themselves qualify.",
-      "status": "listed",
-      "venue": "Kalshi",
-      "url": "https://kalshi.com/markets/kxcompanyactionmerger/kxcompanyactionmerger-27",
-      "source": "https://kalshi.com/markets/kxcompanyactionmerger/kxcompanyactionmerger-27",
-      "checkedAt": "2026-10-02T17:06:20.548Z",
-      "probability": 0.65,
-      "outcomeLabel": "YES / BEFORE 2028",
-      "outcomes": [
-        "Yes · 65.00%",
-        "No · 35.00%"
-      ],
-      "reference": "KALSHI:EVENT:KXCOMPANYACTIONMERGER-27"
+      "reference": "POLYMARKET:EVENT:584288",
+      "eventSlug": "two-spacex-starships-dock-together-by",
+      "marketSlug": "will-two-spacex-starships-dock-together-by-december-31-2027"
     },
     {
       "id": "tweets",
@@ -211,8 +130,8 @@
       "xKind": "volume",
       "status": "listed",
       "venue": "Polymarket",
-      "url": "https://polymarket.com/event/elon-musk-of-tweets-september-29-october-6-2026",
-      "source": "https://polymarket.com/event/elon-musk-of-tweets-september-29-october-6-2026",
+      "url": "https://polymarket.com/event/elon-musk-of-tweets-september-29-october-6-2026?r=mtsmarkets",
+      "source": "https://polymarket.com/event/elon-musk-of-tweets-september-29-october-6-2026?r=mtsmarkets",
       "checkedAt": "2026-10-02T17:06:17.251Z",
       "probability": 0.28,
       "outcomeLabel": "220-239 POSTS",
@@ -244,7 +163,8 @@
         "480-499 · 0.05%",
         "500+ · 0.05%"
       ],
-      "reference": "POLYMARKET:EVENT:1083683"
+      "reference": "POLYMARKET:EVENT:1083683",
+      "eventSlug": "elon-musk-of-tweets-september-29-october-6-2026"
     },
     {
       "id": "mars",

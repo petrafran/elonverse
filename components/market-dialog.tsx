@@ -44,13 +44,13 @@ export function MarketDialog() {
               <strong>
                 {probabilityText(m.probability)}% {m.outcomeLabel || 'Yes'}
               </strong>{' '}
-              · provider snapshot, not an executable quote
+              · {m.live ? 'live Polymarket price' : 'indicative'}, not an executable quote
             </p>
           )}
           <h3>{draft ? 'Proposed resolution criteria' : 'Rule summary · confirm at provider'}</h3>
           <p>
             {m.rules ||
-              'Read the provider’s exact rules and current trading status before taking a position. This research snapshot is not a substitute for those rules.'}
+              'Read the provider’s exact rules and current trading status before taking a position. This summary is not a substitute for those rules.'}
           </p>
           {m.outcomes && (
             <>

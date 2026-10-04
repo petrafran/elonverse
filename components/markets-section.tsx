@@ -19,7 +19,7 @@ const xFilters: { value: 'all' | XKind; label: string }[] = [
   { value: 'keywords', label: 'Keywords' },
 ]
 
-export function MarketsSection({ snapshotLabel }: { snapshotLabel: string }) {
+export function MarketsSection() {
   const { markets, topic, listing, search, xKind, setListing, setSearch, setXKind } = useElonverse()
   const deferredSearch = useDeferredValue(search)
   const query = deferredSearch.toLowerCase().trim()
@@ -112,7 +112,7 @@ export function MarketsSection({ snapshotLabel }: { snapshotLabel: string }) {
         </small>
       </div>
       <p className="data-note">
-        {'Provider listings are dated research snapshots. “Market idea” cards are proposals with no odds or trading yet.'}
+        {'Polymarket odds refresh every minute. “Market idea” cards are proposals with no odds or trading yet.'}
       </p>
       <div className="market-grid" aria-live="polite">
         {shown.map((m) => (

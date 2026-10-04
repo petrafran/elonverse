@@ -1,6 +1,8 @@
 'use client'
 
 import { memo } from 'react'
+import Image from 'next/image'
+import { marketImage } from '@/lib/market-images'
 import { probabilityText, type Market } from '@/lib/catalog'
 import { marketTopic, TopicIcon } from './topic-icon'
 import { useElonverse } from './elonverse-provider'
@@ -12,6 +14,14 @@ export const MarketCard = memo(function MarketCard({ market: m }: { market: Mark
 
   return (
     <article className="market-card">
+      <div className="card-image">
+        <Image
+          src={marketImage(m.id).src}
+          alt=""
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+        />
+      </div>
       <div className="card-top">
         <span className="tag">{m.topic}</span>
         <span className="card-symbol" aria-hidden="true">
@@ -47,7 +57,7 @@ export const MarketCard = memo(function MarketCard({ market: m }: { market: Mark
       <div className="card-footer">
         <span className={`venue-badge${isIdea ? ' idea' : ''}`}>
           {m.venue}
-          {isIdea ? ' / DRAFT' : ' / SNAPSHOT'}
+          {isIdea ? ' / DRAFT' : m.live ? ' / LIVE' : ''}
         </span>
         <button type="button" onClick={() => openMarket(m.id)}>
           {isIdea ? 'View proposal' : 'View market'}

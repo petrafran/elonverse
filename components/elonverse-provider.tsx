@@ -1,7 +1,9 @@
 'use client'
 
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
+import useSWR from 'swr'
 import { topicLabels, type Market, type MarketStatus, type Topic, type XKind } from '@/lib/catalog'
+import type { OddsResponse } from '@/lib/polymarket'
 
 type Listing = 'all' | MarketStatus
 type XFilter = 'all' | XKind
@@ -32,7 +34,43 @@ export function useElonverse() {
 
 const searchCategories = ['all', 'space', 'machines', 'ai', 'x', 'ideas', 'culture']
 
-export function ElonverseProvider({ markets, children }: { markets: Market[]; children: ReactNode }) {
+const oddsFetcher = async (url: string): Promise<OddsResponse> => {
+  const response = await fetch(url)
+  if (!response.ok) throw new Error('Odds unavailable')
+  return response.json()
+}
+
+export function ElonverseProvider({
+  markets: baseMarkets,
+  initialOdds,
+  children,
+}: {
+  markets: Market[]
+  initialOdds: OddsResponse
+  children: ReactNode
+}) {
+  const { data: oddsData } = useSWR('/api/odds', oddsFetcher, {
+    fallbackData: initialOdds,
+    refreshInterval: 60_000,
+    revalidateOnMount: false,
+    revalidateOnFocus: false,
+    keepPreviousData: true,
+  })
+  const markets = useMemo(() => {
+    const odds = oddsData?.odds ?? {}
+    return baseMarkets.map((m) => {
+      const live = odds[m.id]
+      if (!live) return m
+      return {
+        ...m,
+        probability: live.probability,
+        outcomeLabel: live.outcomeLabel ?? m.outcomeLabel,
+        checkedAt: oddsData?.fetchedAt,
+        live: true,
+      }
+    })
+  }, [baseMarkets, oddsData])
+
   const [topic, setTopicState] = useState<Topic>('home')
   const [listing, setListing] = useState<Listing>('all')
   const [search, setSearch] = useState('')
@@ -70,7 +108,7 @@ export function ElonverseProvider({ markets, children }: { markets: Market[]; ch
       name: 'search_elonverse_markets',
       title: 'Search Elonverse markets',
       description:
-        'Read the catalog of provider snapshots and proposed markets. Returns relevant questions, their provenance and links without placing trades.',
+        'Read the catalog of live Polymarket markets and proposed markets. Returns relevant questions, their provenance and links without placing trades.',
       inputSchema: {
         type: 'object',
         properties: { query: { type: 'string' }, category: { type: 'string', enum: searchCategories } },

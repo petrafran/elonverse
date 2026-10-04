@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
     formats: ['image/avif', 'image/webp'],
     qualities: [80],
     minimumCacheTTL: 31536000,
+    remotePatterns: [{ protocol: 'https', hostname: 'ipfs.io', pathname: '/ipfs/**' }],
   },
   async headers() {
     return [

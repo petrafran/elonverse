@@ -22,6 +22,9 @@ export interface Market {
   outcomes?: string[]
   reference?: string
   xKind?: XKind
+  eventSlug?: string
+  marketSlug?: string
+  live?: boolean
 }
 
 export interface PerpContext {

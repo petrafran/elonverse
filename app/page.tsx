@@ -1,4 +1,6 @@
 import { catalog } from '@/lib/catalog'
+import { fetchOdds } from '@/lib/polymarket'
+import { fetchPerps } from '@/lib/perps'
 import { ElonverseProvider } from '@/components/elonverse-provider'
 import { SiteHeader } from '@/components/site-header'
 import { TopicNav } from '@/components/topic-nav'
@@ -8,9 +10,16 @@ import { PerpsSection } from '@/components/perps-section'
 import { MarketDialog } from '@/components/market-dialog'
 import { BetAgainstSection, CultureSection, LedgerSection, SiteFooter } from '@/components/static-sections'
 
-export default function Page() {
+export const revalidate = 60
+
+export default async function Page() {
+  const [odds, perps] = await Promise.all([
+    fetchOdds().catch(() => ({ odds: {}, fetchedAt: new Date().toISOString() })),
+    fetchPerps().catch(() => ({ perps: {}, count: 0, fetchedAt: new Date().toISOString() })),
+  ])
+
   return (
-    <ElonverseProvider markets={catalog.markets}>
+    <ElonverseProvider markets={catalog.markets} initialOdds={odds}>
       <a className="skip-link" href="#content">
         Skip to markets
       </a>
@@ -18,8 +27,8 @@ export default function Page() {
       <TopicNav />
       <main id="content">
         <Masthead />
-        <MarketsSection snapshotLabel={catalog.snapshotLabel} />
-        <PerpsSection snapshot={catalog.perps} snapshotTime={catalog.perpCheckedAt} />
+        <MarketsSection />
+        <PerpsSection initial={perps} />
         <BetAgainstSection />
         <LedgerSection />
         <CultureSection />

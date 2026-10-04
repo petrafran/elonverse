@@ -24,20 +24,21 @@ const fetcher = async (url: string): Promise<PerpResponse> => {
   return response.json()
 }
 
-export function PerpsSection({ snapshot, snapshotTime }: { snapshot: PerpMap; snapshotTime: string }) {
+export function PerpsSection({ initial }: { initial: PerpResponse }) {
   const { data, error, isValidating, mutate } = useSWR('/api/perps', fetcher, {
+    fallbackData: initial,
     refreshInterval: 60_000,
+    revalidateOnMount: false,
     revalidateOnFocus: false,
     keepPreviousData: true,
   })
 
-  const perps: PerpMap = { ...snapshot, ...data?.perps }
+  const perps: PerpMap = data?.perps ?? {}
   const count = data?.count ?? 0
 
   let status: string
-  if (isValidating) status = data ? 'Refreshing venue data…' : 'Fetching venue data…'
-  else if (error || (data && count === 0))
-    status = 'Refresh unavailable. Displayed figures are the saved snapshot; confirm at the venue.'
+  if (isValidating) status = 'Refreshing Lighter data…'
+  else if (error || (data && count === 0)) status = 'Lighter data unavailable right now; confirm prices at the venue.'
   else if (data && count < perpDefs.length)
     status = `Partial update · ${count}/${perpDefs.length} contracts fetched; other figures may be older`
   else if (data) status = `Venue data · ${formatPacific(data.fetchedAt, { hour: 'numeric', minute: '2-digit' })} · refresh to update`
@@ -63,7 +64,7 @@ export function PerpsSection({ snapshot, snapshotTime }: { snapshot: PerpMap; sn
       <div className="perp-grid">
         {perpDefs.map((d) => {
           const p = perps[d.coin]
-          const ticker = d.coin.split(':').pop()
+          const ticker = d.coin
           const pct = p && Number(p.prevDayPx) > 0 ? (Number(p.markPx) / Number(p.prevDayPx) - 1) * 100 : null
           return (
             <article className="perp-card" key={d.coin}>
@@ -73,7 +74,7 @@ export function PerpsSection({ snapshot, snapshotTime }: { snapshot: PerpMap; sn
               </div>
               <h3>{d.name}</h3>
               <div className="perp-mark">
-                <strong>{p ? usd(p.markPx, d.coin === 'DOGE' ? 5 : 2) : '—'}</strong>
+                <strong>{p ? usd(p.markPx, d.digits) : '—'}</strong>
                 <span className={`perp-change${pct != null && pct < 0 ? ' negative' : ''}`}>
                   {pct != null ? `${pct >= 0 ? '+' : ''}${pct.toFixed(2)}% / 24h` : 'Venue data unavailable'}
                 </span>
@@ -89,12 +90,12 @@ export function PerpsSection({ snapshot, snapshotTime }: { snapshot: PerpMap; sn
                 </div>
               </div>
               <small className="perp-updated">
-                {p
-                  ? `Data: ${formatPacific(p._fetchedAt || snapshotTime, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}`
+                {p?._fetchedAt
+                  ? `Data: ${formatPacific(p._fetchedAt, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}`
                   : 'Check current availability at venue'}
               </small>
-              <a href={d.url} target="_blank" rel="noopener noreferrer">
-                View {ticker} at venue
+              <a href={d.url} target="_blank" rel="noopener">
+                Trade {ticker} on Lighter
               </a>
             </article>
           )
